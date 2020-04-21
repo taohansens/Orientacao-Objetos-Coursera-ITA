@@ -4,10 +4,6 @@ import java.util.*;
 
 class Pizza {
 
-	// HashMap<String, Integer> ingredientes = new HashMap<String, Integer>();
-	
-	protected static HashMap<String, Integer> totalPizzas = new HashMap<String, Integer>();
-
 	private List<String> ingPizzas = new ArrayList<String>();
 
 	void adicionaIngrediente(String ingrediente) {
