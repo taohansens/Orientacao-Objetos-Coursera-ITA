@@ -3,19 +3,20 @@ package semana2.pizza;
 import java.util.*;
 
 class Pizza {
-
+	
+	private static HashMap<String, Integer> totalPizzas = new HashMap<String, Integer>();
 	private List<String> ingPizzas = new ArrayList<String>();
 
-	void adicionaIngrediente(String ingrediente) {
+	protected void adicionaIngrediente(String ingrediente) {
 		ingPizzas.add(ingrediente);
 		contabilizaIngrediente(ingrediente, 1);
 	}
 
-	int getQtdIngredientes() {
+	protected int getQtdIngredientes() {
 		return ingPizzas.size();
 	}
 
-	int getPreco() {
+	protected int getPreco() {
 		int precoPizza = 0;
 		int qtd = getQtdIngredientes();
 		int precoParcial = 0;
@@ -30,7 +31,7 @@ class Pizza {
 		return precoPizza;
 	}
 
-	static void contabilizaIngrediente(String chave, int valor) {
+	private static void contabilizaIngrediente(String chave, int valor) {
 		if (totalPizzas.containsKey(chave)) {
 			totalPizzas.put(chave, totalPizzas.get(chave) + 1);
 		} else {
@@ -38,7 +39,7 @@ class Pizza {
 		}
 	}
 	
-	public static void mostraIngredientes() {
+	protected static void mostraIngredientes() {
 		System.out.println("QTD  Ingrediente");
 		for(Map.Entry<String, Integer> totalPizzas : totalPizzas.entrySet()) {
 			System.out.println(totalPizzas.getValue() + "  | "+ totalPizzas.getKey());

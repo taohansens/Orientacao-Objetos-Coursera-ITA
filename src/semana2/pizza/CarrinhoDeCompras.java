@@ -4,9 +4,9 @@ import java.util.*;
 
 public class CarrinhoDeCompras {
 
-	protected List<Pizza> pizzas = new ArrayList<Pizza>();
+	private List<Pizza> pizzas = new ArrayList<Pizza>();
 
-	public void adicionaPizza(Pizza pizza) {
+	protected void adicionaPizza(Pizza pizza) {
 		if (pizza.getQtdIngredientes() > 0) {
 			pizzas.add(pizza);
 		} else {
@@ -14,7 +14,7 @@ public class CarrinhoDeCompras {
 		}
 	}
 
-	public int getTotalPreco() {
+	protected int getTotalPreco() {
 		int valorCarrinho = 0;
 		for (Pizza item : pizzas) {
 			valorCarrinho += item.getPreco();
