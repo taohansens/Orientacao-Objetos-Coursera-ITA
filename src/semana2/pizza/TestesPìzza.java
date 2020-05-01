@@ -8,7 +8,9 @@ class TestesPìzza {
 
 	
 
-	
+/*
+ * Verificando valores das Pizzas
+ */
 	@Test
 	void testaValorPizza2() {
 		Pizza simples = new Pizza();
@@ -35,6 +37,18 @@ class TestesPìzza {
         simples.adicionaIngrediente("Parmesao");
         simples.adicionaIngrediente("Salame");
         simples.adicionaIngrediente("Azeitona");
-        assertEquals(20, simples.getPreco());
+        assertEquals(23, simples.getPreco());
+	}
+	
+	@Test
+	void testaIngredientesPizza() {
+		Pizza simples = new Pizza();
+        simples.adicionaIngrediente("Tomate");
+        simples.adicionaIngrediente("Azeitona");
+        simples.adicionaIngrediente("Alho Poro");
+        simples.adicionaIngrediente("Parmesao");
+        simples.adicionaIngrediente("Salame");
+        simples.adicionaIngrediente("Azeitona");
+        assertEquals(23, simples.getPreco());
 	}
 }
