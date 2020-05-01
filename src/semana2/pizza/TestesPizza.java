@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
-class TestesPìzza {
+class TestesPizza {
 	
 	CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
 	Pizza pizza = new Pizza();
