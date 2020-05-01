@@ -5,7 +5,7 @@ import java.util.*;
 class Pizza {
 	
 	private static HashMap<String, Integer> totalPizzas = new HashMap<String, Integer>();
-	private static List<String> ingPizzas = new ArrayList<String>();
+	private List<String> ingPizzas = new ArrayList<String>();
 
 	protected void adicionaIngrediente(String ingrediente) {
 		ingPizzas.add(ingrediente);
@@ -31,7 +31,7 @@ class Pizza {
 		return precoPizza;
 	}
 
-	private static void contabilizaIngrediente(String chave, int valor) {
+	private void contabilizaIngrediente(String chave, int valor) {
 		if (totalPizzas.containsKey(chave)) {
 			totalPizzas.put(chave, totalPizzas.get(chave) + 1);
 		} else {
@@ -39,14 +39,14 @@ class Pizza {
 		}
 	}
 	
-	protected static void mostraIngredientes() {
+	protected static  void mostraIngredientes() {
 		System.out.println("QTD  Ingrediente");
 		for(Map.Entry<String, Integer> totalPizzas : totalPizzas.entrySet()) {
 			System.out.println(totalPizzas.getValue() + "  | "+ totalPizzas.getKey());
 		}
 	}
 	
-	static void zerarVariaveis() {
+	void zerarVariaveis() {
 		totalPizzas.clear();
 		ingPizzas.clear();
 		

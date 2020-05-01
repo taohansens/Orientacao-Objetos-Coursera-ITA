@@ -26,7 +26,13 @@ public class CarrinhoDeCompras {
 		return pizzas.size();
 	}
 	
-	public static void zerarVariaveis() {
+	public static void zerarCarrinho() {
 		pizzas.clear();
+	}
+	
+	public void listIngCarrinho() {
+		for (Pizza item : pizzas) {
+			System.out.println("ING "+item.getQtdIngredientes()+"\nPreco "+item.getPreco());
+		}
 	}
 }
