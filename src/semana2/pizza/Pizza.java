@@ -15,6 +15,10 @@ class Pizza {
 	protected int getQtdIngredientes() {
 		return ingPizzas.size();
 	}
+	
+	protected void zeraIngredientes() {
+		ingPizzas.clear();
+	}
 
 	protected int getPreco() {
 		int precoPizza = 0;
@@ -44,6 +48,11 @@ class Pizza {
 		for(Map.Entry<String, Integer> totalPizzas : totalPizzas.entrySet()) {
 			System.out.println(totalPizzas.getValue() + "  | "+ totalPizzas.getKey());
 		}
+	}
+	
+	protected void zerarVariaveis() {
+		totalPizzas.clear();
+		zeraIngredientes();
 	}
 
 }
