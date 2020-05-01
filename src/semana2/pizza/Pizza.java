@@ -5,7 +5,7 @@ import java.util.*;
 class Pizza {
 	
 	private static HashMap<String, Integer> totalPizzas = new HashMap<String, Integer>();
-	private List<String> ingPizzas = new ArrayList<String>();
+	private static List<String> ingPizzas = new ArrayList<String>();
 
 	protected void adicionaIngrediente(String ingrediente) {
 		ingPizzas.add(ingrediente);
@@ -16,10 +16,6 @@ class Pizza {
 		return ingPizzas.size();
 	}
 	
-	protected void zeraIngredientes() {
-		ingPizzas.clear();
-	}
-
 	protected int getPreco() {
 		int precoPizza = 0;
 		int qtd = getQtdIngredientes();
@@ -50,9 +46,9 @@ class Pizza {
 		}
 	}
 	
-	protected void zerarVariaveis() {
+	protected static void zerarVariaveis() {
 		totalPizzas.clear();
-		zeraIngredientes();
+		ingPizzas.clear();
 	}
 
 }
