@@ -46,9 +46,10 @@ class Pizza {
 		}
 	}
 	
-	protected static void zerarVariaveis() {
+	static void zerarVariaveis() {
 		totalPizzas.clear();
 		ingPizzas.clear();
+		
 	}
 
 }

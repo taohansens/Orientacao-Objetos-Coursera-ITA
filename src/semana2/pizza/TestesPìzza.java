@@ -2,53 +2,66 @@ package semana2.pizza;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
 
-class TestesPizza {
+import org.junit.jupiter.api.*;
 
+class TestesPìzza {
 	
+	CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+	Pizza pizza = new Pizza();
 
-/*
- * Verificando valores das Pizzas
- */
+	@AfterEach
+	public void reset() {
+		Pizza.zerarVariaveis();
+		CarrinhoDeCompras.zerarVariaveis();
+}
+
 	@Test
 	void testaValorPizza2() {
-		Pizza simples = new Pizza();
-        simples.adicionaIngrediente("Tomate");
-        simples.adicionaIngrediente("Azeitona");
-        assertEquals(15, simples.getPreco());
+		pizza.adicionaIngrediente("Tomate");
+		pizza.adicionaIngrediente("Azeitona");
+		assertEquals(15, pizza.getPreco());
 	}
-	
+
 	@Test
 	void testaValorPizza3() {
-		Pizza simples = new Pizza();
-        simples.adicionaIngrediente("Tomate");
-        simples.adicionaIngrediente("Azeitona");
-        simples.adicionaIngrediente("Alho Poro");
-        assertEquals(20, simples.getPreco());
+		pizza.adicionaIngrediente("Tomate");
+		pizza.adicionaIngrediente("Azeitona");
+		pizza.adicionaIngrediente("Alho Poro");
+		assertEquals(20, pizza.getPreco());
 	}
-	
+
 	@Test
 	void testaValorPizza5() {
-		Pizza simples = new Pizza();
-        simples.adicionaIngrediente("Tomate");
-        simples.adicionaIngrediente("Azeitona");
-        simples.adicionaIngrediente("Alho Poro");
-        simples.adicionaIngrediente("Parmesao");
-        simples.adicionaIngrediente("Salame");
-        simples.adicionaIngrediente("Azeitona");
-        assertEquals(23, simples.getPreco());
+		pizza.adicionaIngrediente("Tomate");
+		pizza.adicionaIngrediente("Azeitona");
+		pizza.adicionaIngrediente("Alho Poro");
+		pizza.adicionaIngrediente("Parmesao");
+		pizza.adicionaIngrediente("Salame");
+		pizza.adicionaIngrediente("Azeitona");
+		assertEquals(23, pizza.getPreco());
 	}
 	
 	@Test
-	void testaIngredientesPizza() {
-		Pizza simples = new Pizza();
-        simples.adicionaIngrediente("Tomate");
-        simples.adicionaIngrediente("Azeitona");
-        simples.adicionaIngrediente("Alho Poro");
-        simples.adicionaIngrediente("Parmesao");
-        simples.adicionaIngrediente("Salame");
-        simples.adicionaIngrediente("Azeitona");
-        assertEquals(23, simples.getPreco());
+	void testaQtdIngre() {
+		pizza.adicionaIngrediente("Tomate");
+		assertEquals(1, pizza.getQtdIngredientes());
 	}
+	
+	@Test
+	void testaQtdIngre4() {
+		pizza.adicionaIngrediente("Tomate");
+		pizza.adicionaIngrediente("Cebola");
+		pizza.adicionaIngrediente("Alho");
+		pizza.adicionaIngrediente("Oregano");
+		assertEquals(4, pizza.getQtdIngredientes());
+	}
+	
+	@Test
+	void testaCarrinho() {
+
+		carrinho.adicionaPizza(pizza);
+		assertNull(carrinho);
+	}
+	
 }

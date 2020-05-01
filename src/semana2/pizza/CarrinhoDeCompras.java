@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CarrinhoDeCompras {
 
-	private List<Pizza> pizzas = new ArrayList<Pizza>();
+	private static List<Pizza> pizzas = new ArrayList<Pizza>();
 
 	protected void adicionaPizza(Pizza pizza) {
 		if (pizza.getQtdIngredientes() > 0) {
@@ -20,5 +20,13 @@ public class CarrinhoDeCompras {
 			valorCarrinho += item.getPreco();
 		}
 		return valorCarrinho;
+	}
+
+	protected int qtdPizzasCarrinho() {
+		return pizzas.size();
+	}
+	
+	public static void zerarVariaveis() {
+		pizzas.clear();
 	}
 }
