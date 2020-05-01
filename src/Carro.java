@@ -12,6 +12,10 @@ public class Carro {
 		this.nome = nome;
 	}
 	
+	public Carro() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getVelocidade() {
 		return velocidade;
 	}
@@ -30,7 +34,7 @@ public class Carro {
 	}
 	
 	void imprime() {
-		System.out.println("O carro "+nome+" está a velocidade de "+getVelocidade()+" km/h");
+		System.out.println("O carro "+nome+" estï¿½ a velocidade de "+getVelocidade()+" km/h");
 		System.out.println("Potencia = "+potencia);
 	}
 }
