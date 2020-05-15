@@ -23,3 +23,7 @@
 hs_err_pid*
 .classpath
 .project
+
+bin/*
+Orientacao-Objetos-Coursera-ITA.iml
+.idea
