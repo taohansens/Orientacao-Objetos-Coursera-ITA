@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TesteCarro {
-	Carro c;
+class TesteCarroMult {
+	CarroDeCorrida c;
 	@BeforeEach
 	public void inicializaCarro(){
-		c = new Carro("teste",10, 100);
+		c = new CarroMult("teste",1.5, 100);
 	}
 
 	@Test
@@ -19,9 +19,16 @@ class TesteCarro {
 
 	
 	@Test
-	void testAcelerar() {
+	void testAcelerarUmaVez() {
 		c.acelerar();
 		assertEquals(10, c.getVelocidade());	
+	}
+
+	@Test
+	void testAcelerarDuasVezes() {
+		c.acelerar();
+		c.acelerar();
+		assertEquals(15, c.getVelocidade());
 	}
 
 	@Test

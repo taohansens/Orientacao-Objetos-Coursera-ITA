@@ -1,10 +1,10 @@
 package semana4.Carro;
 
-public class Carro extends CarroDeCorrida {
+public class CarroSoma extends CarroDeCorrida {
     private int potencia;
 
-    protected Carro(String nome, int potencia, int velocidadeMaxima) {
-        super(velocidadeMaxima, nome);
+    protected CarroSoma(String nome, int potencia, int velocidadeMaxima) {
+        super(nome, velocidadeMaxima);
         this.potencia = potencia;
     }
 
