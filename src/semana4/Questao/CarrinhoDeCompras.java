@@ -32,12 +32,24 @@ public class CarrinhoDeCompras {
 
     }
 
-    protected double calculaCarrinho(){
+    public double calculaCarrinho(){
         double valorCarrinho = 0;
         for (Produto p : carrinho.keySet()) {
-            valorCarrinho += p.getPreco();
+            valorCarrinho += p.getPreco()*carrinho.get(p);
         }
         return valorCarrinho;
+    }
+
+    public double qtdDeProduto(){
+        return carrinho.size();
+    }
+
+    public double qtdDeItens(){
+        int qtdDeItem =0;
+        for (Produto p : carrinho.keySet()) {
+            qtdDeItem += carrinho.get(p);
+        }
+        return qtdDeItem;
     }
 
     }
