@@ -2,7 +2,7 @@ package semana4.QuestaoComplementar;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestesCompra {
 
@@ -19,23 +19,23 @@ public class TestesCompra {
     }
     @Test
     void testaCompraNormal(){
-        assertEquals(120,c.total());
+        assertEquals("120",c.total().toString());
     }
     @Test
     void testaCompraaVistaComJuros(){
-        assertEquals(128.40,c1.total());
+        assertEquals("128.40",c1.total().toString());
     }
     @Test
     void testaCompraPar2(){
-        assertEquals(137.39,c2.total());
+        assertEquals("137.39",c2.total().toString());
     }
     @Test
     void testaCompraPar5(){
-        assertEquals(176.32,c5.total());
+        assertEquals("176.32",c5.total().toString());
     }
     @Test
     void testaCompraPar10(){
-        assertEquals(284.08,c10.total());
+        assertEquals("284.08",c10.total().toString());
     }
 
 }
