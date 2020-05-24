@@ -7,60 +7,30 @@ import semana4.Questao.Produto;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TesteProduto {
+	Produto p; Produto p1; Produto p2; Produto p3;
+
+	@BeforeEach
+	public void inicializaProdutos(){
+		p = new Produto("caneta", 2020,2.00);
+		p1 = new Produto("lapis", 2020,1.00); //mesmo codigo, para testes;
+		p2 = new Produto("borracha", 2021,1.5);
+		p3 = new Produto("papel", 2122,0.50);
+	}
 	@Test
-	void verificaSeIgual() {
-		Produto p = new Produto("caneta", 93939,2.00);
-		Produto p1 = new Produto("caneta", 93938,2.50);
-		Produto p2 = new Produto("caneta",93939, 4.00);
+	//Verifica se iguais com mesmo codigo.
+	void verificaIguais() {
 		assertEquals(p,p1);
 	}
 
-
-
-
-
-
-	/*	CarroSoma c;
-	@BeforeEach
-	public void inicializaCarro(){
-		c = new CarroSoma("teste",10, 100);
+	@Test
+	//Diferentes
+	void verificaDiferentes(){
+		assertEquals(p2,p3);
 	}
 
 	@Test
-	void testCarroParado() {
-		assertEquals(0, c.getVelocidade());	
+	//Diferentes
+	void verificaDiferentes1(){
+		assertEquals(p,p3);
 	}
-
-	
-	@Test
-	void testAcelerar() {
-		c.acelerar();
-		assertEquals(10, c.getVelocidade());	
-	}
-
-	@Test
-	void testFrear() {
-		c.acelerar();
-		c.frear();
-		assertEquals(5, c.getVelocidade());	
-	}
-	
-	@Test
-	void testFrearAteZero() {
-		c.acelerar();
-		c.frear();
-		c.frear();
-		c.frear();
-		c.frear();
-		assertEquals(0, c.getVelocidade());	
-	}
-
-	@Test
-	void testAcelerarAteVelMax() {
-		for (int i=0; i<14; i++){
-			c.acelerar();
-		}
-		assertEquals(100, c.getVelocidade());
-	}
- */
 }

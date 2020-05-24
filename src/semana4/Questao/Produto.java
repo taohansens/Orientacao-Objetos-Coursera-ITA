@@ -39,10 +39,11 @@ public class Produto {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Produto produto = (Produto) o;
-        return codigo == produto.codigo;
+        if ((o instanceof Produto) &&
+                ((Produto) o).getCodigo() == (this.getCodigo())){
+            return true;
+        }else
+            return false;
     }
 
     @Override
