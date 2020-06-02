@@ -10,8 +10,8 @@ public class Respeitoso implements FormatadorNome {
     @Override
     public String formatarNome(String nome, String sobrenome) {
         if (sexo)
-            return "Sra. " + nome + " " + sobrenome;
+            return "Sra. " + sobrenome;
         else
-            return "Sr. " + nome + " " + sobrenome;
+            return "Sr. " + sobrenome;
     }
 }
