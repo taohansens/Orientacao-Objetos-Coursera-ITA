@@ -39,4 +39,13 @@ public class Candidato implements Comparable<Candidato> {
             return nota-outro.getNota();
         }
     }
+
+    @Override
+    public String toString() {
+        return "Candidato{" +
+                "nota=" + nota +
+                ", deficiente=" + deficiente +
+                ", idade=" + idade +
+                '}';
+    }
 }
