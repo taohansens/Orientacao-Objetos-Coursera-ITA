@@ -1,14 +1,18 @@
 package semana6.Excecoes;
 
 public class Principal {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         a(100);
-        b(200);
     }
 
-    public static void a(int i) throws Exception {
+    public static void a(int i){
         System.out.println("executando a() com "+i);
-        b(200);
+        try {
+            b(200);}
+        catch (Exception e){
+            System.out.println("tratado a excecao: "+e.getMessage());
+        }
+
     }
 
     public static void b(int i) throws Exception{
