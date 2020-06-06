@@ -16,4 +16,22 @@ public class TesteAutenticador {
         Usuario u = a.logar("tao","senhadotao");
         assertEquals("tao", u.getLogin());
     }
+
+    @Test(expected = LoginException.class)
+    public void loginComFalha() throws LoginException {
+        Autenticador a = new Autenticador();
+        Usuario u = a.logar("tao","1234");
+        assertEquals("tao", u.getLogin());
+    }
+
+    @Test
+    public void informacaoDoErro() {
+        Autenticador a = new Autenticador();
+        try {
+            Usuario u = a.logar("tao", "1234");
+            fail();
+        }catch (LoginException e) {
+            assertEquals("tao",e.getLogin());
+        };
+    }
 }
