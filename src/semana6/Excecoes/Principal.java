@@ -8,7 +8,7 @@ public class Principal {
     public static void a(int i){
         System.out.println("executando a() com "+i);
         try {
-            b(200);}
+            b(i);}
         catch (Exception e){
             System.out.println("tratado a excecao: "+e.getMessage());
         }
