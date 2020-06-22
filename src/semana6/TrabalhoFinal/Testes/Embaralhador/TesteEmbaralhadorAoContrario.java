@@ -1,4 +1,4 @@
-package semana6.TrabalhoFinal.Testes;
+package semana6.TrabalhoFinal.Testes.Embaralhador;
 import org.junit.jupiter.api.Test;
 import semana6.TrabalhoFinal.EmbaralhadorAoContrario;
 
