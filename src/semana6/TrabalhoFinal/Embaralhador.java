@@ -1,5 +1,5 @@
 package semana6.TrabalhoFinal;
 
 public interface Embaralhador {
-    abstract String embaralhar(String s);
+    abstract String embaralhar(String palavra);
 }
