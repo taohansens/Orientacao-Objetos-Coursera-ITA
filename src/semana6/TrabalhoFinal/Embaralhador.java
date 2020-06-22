@@ -1,4 +1,5 @@
 package semana6.TrabalhoFinal;
 
-public class Embaralhador {
+public interface Embaralhador {
+    abstract String embaralhar(String s);
 }
