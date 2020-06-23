@@ -4,15 +4,15 @@ import java.util.Random;
 
 public class FabricaEmbaralhadores {
 
-    public int retornaEmbaralhador(){
+    public Embaralhador retornaEmbaralhador() {
         Random random = new Random();
         int randomNum = random.nextInt(3) + 1;
-            if (randomNum == 1) {
-                return 1;}
-            else if (randomNum == 2) {
-                    return 2;
-            }else{
-                return 3;
-            }
+        if (randomNum == 1) {
+            return new EmbaralhadorAnagrama();
+        } else if (randomNum == 2) {
+            return new EmbaralhadorAoContrario();
+        } else {
+            return new EmbaralhadorAnagrama();
+        }
     }
 }
