@@ -6,12 +6,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 public class BancoDePalavras {
     static private ArrayList<String> palavras = new ArrayList<String>();
 
     public BancoDePalavras(){
         try{
-            FileReader arq = new FileReader("bancoDePalavras.txt");
+            String arquivo = "\\banco.txt";
+            FileReader arq = new FileReader(arquivo);
             BufferedReader lerArq = new BufferedReader(arq);
             String linha = lerArq.readLine();
 

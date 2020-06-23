@@ -35,7 +35,7 @@ public class MecanicaMorteSubita implements MecanicaDoJogo {
     }
 
     public void acerta(int n) {
-        this.pontos += n * 2;
+        this.pontos += n * 4;
     }
 
     public void setPalavraDepois() {
